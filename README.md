@@ -2,8 +2,8 @@
 Doing geolocation without installing Geoclue.
 
 ## required dependencies
-curl
-jq
++ curl
++ jq
 
 ## optional dependency
 systemd (although you could use a cronjob if you like)
