@@ -1,0 +1,13 @@
+[Unit]
+Description=Get location every 45 minutes
+RefuseManualStart=no  # Allow manual starts
+RefuseManualStop=no   # Allow manual stops
+
+[Timer]
+Persistent=true
+OnBootSec=120
+OnTimezoneChange=true
+OnActiveSec=2700
+
+[Install]
+WantedBy=timers.target

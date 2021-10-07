@@ -1,0 +1,9 @@
+[Unit]
+Description=Get location
+
+[Service]
+Type=simple
+ExecStart=%h/bin/get_location
+
+[Install]
+WantedBy=default.target

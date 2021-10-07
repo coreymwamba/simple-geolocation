@@ -1,0 +1,5 @@
+#!/bin/sh
+curl -s https://location.services.mozilla.com/v1/geolocate?key=geoclue > $HOME/.local/share/geoobj.json
+LAT=$(jq -r '.location.lat' $HOME/.local/share/geoobj.json)
+LON=$(jq -r '.location.lng' $HOME/.local/share/geoobj.json)
+echo "$LAT $LON" > .local/share/coords
