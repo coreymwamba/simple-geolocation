@@ -1,6 +1,8 @@
 # simple-geolocation
 Doing geolocation without installing Geoclue.
 
+This produces a text file (`$HOME/.local/share/coords`) which you can then `cat` and use in other scripts.
+
 ## required dependencies
 + curl
 + jq
