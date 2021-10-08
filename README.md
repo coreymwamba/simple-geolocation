@@ -12,7 +12,7 @@ systemd (although you could use a cronjob if you like)
 
 ## install and usage
 ```
-mv get_location {executables path}
+mv get_location <your executables path>
 chmod +x get_location
 ```
 ### optionally
