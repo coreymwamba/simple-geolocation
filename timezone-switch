@@ -1,0 +1,6 @@
+#!/bin/sh
+LOC=$(cat "$HOME"/.local/share/coords)
+LAT="$(echo $LOC | awk '{ print $1 }')"
+LON="$(echo $LOC | awk '{ print $2 }')"
+sudo timedatectl set-timezone $(yes 1 | tzselect -c "+$LAT+$LON" -n 1)
+exit
