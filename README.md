@@ -1,11 +1,12 @@
 # simple-geolocation
-Doing geolocation without installing Geoclue.
+Doing geolocation without installing Geoclue; and switch the timezone accordingly.
 
 This produces a text file (`$HOME/.local/share/coords`) which you can then `cat` and use in other scripts.
 
 ## required dependencies
 + curl
 + jq
++ tzselect
 
 ## optional dependency
 systemd (although you could use a cronjob if you like)
