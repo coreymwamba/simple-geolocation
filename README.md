@@ -15,6 +15,8 @@ systemd (although you could use a cronjob if you like)
 mv get_location <your executables path>
 chmod +x get_location
 ```
+You can then execute `get_location`
+
 ### optionally
 Edit get_location.timer to the time interval you want, and then
 ```
@@ -23,5 +25,14 @@ systemctl --user enable get_location.service get_location.timer
 systemctl --user start get_location.service get_location.timer 
 ```
 *or* make a cron job
+
+To use in a script:
+```
+#!/bin/sh
+LOC=$(cat $HOME/.local/share/coords)
+LAT="$(echo $LOC | awk '{ print $1 }')"
+LON="$(echo $LOC | awk '{ print $2 }')"
+<rest of script...>
+```
 
 
